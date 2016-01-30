@@ -8,20 +8,19 @@ Summary: The porpuse of this analysis is to get, clean, arrange and summarize da
 Located in this url: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Files structure:
-        * activity_labels.txt : activityLevelIds, descriptions. 6 activities. Space separated
-        * features.txt : feaureIndex, featureName. 561 features, Space separated
-        * test folder : Test Subjects detail activity data
-                + Inertial Signals : Folder with detailed inertial signal not considered for this work
-                + subject_test.txt : subjectNumber records, one line per observation (2,947 test subjects)
-                + y_test.txt : activityId records, activity perfomed one line per observation (2,947 test subjects)
-                + X_test.txt : 561 features measured for each observation (2,947 test subjects). Space separated
-        *train folder : Test Subjects detail activity data
-                + Inertial Signals : Folder with detailed inertial signal not considered for this work
-                + subject_train.txt : subjectNumber records, one line per observation (7,352 train subjects)
-                + y_train.txt : activityId records, activity perfomed one line per observation (7,352 train subjects)
-                + X_train.txt : 561 features measured for each observation (7,352 train subjects). Space separated
+* activity_labels.txt : activityLevelIds, descriptions. 6 activities. Space separated
+* features.txt : feaureIndex, featureName. 561 features, Space separated
+* test folder : Test Subjects detail activity data
+        + Inertial Signals : Folder with detailed inertial signal not considered for this work
+        + subject_test.txt : subjectNumber records, one line per observation (2,947 test subjects)
+        + y_test.txt : activityId records, activity perfomed one line per observation (2,947 test subjects)
+        + X_test.txt : 561 features measured for each observation (2,947 test subjects). Space separated
+*train folder : Test Subjects detail activity data
+        + Inertial Signals : Folder with detailed inertial signal not considered for this work
+        + subject_train.txt : subjectNumber records, one line per observation (7,352 train subjects)
+        + y_train.txt : activityId records, activity perfomed one line per observation (7,352 train subjects)
+        + X_train.txt : 561 features measured for each observation (7,352 train subjects). Space separated
 
-         
 ## Extent of Processing 
         1. Activities and Features index tables read initially
         2. Features names cleared and transformed on:
