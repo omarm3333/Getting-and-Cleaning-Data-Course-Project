@@ -28,8 +28,9 @@ Files structure:
  + Parenthesis with content : Open parenthesis replaced with "." and closing parenthesis removed from the end of the line. 
  + Dashes "-"               : Replaced by "."
 3. Identify index of features with **"Mean"** and **"Std"** in feature's name
-4. Join subject, activity id and features of train subjects
-5. Join subject, activity id and features of test subjects
+4. Select with this index only the columns with **Mean** or **Std** text in feature name
+4. Join subject id, activity id and features of train subjects
+5. Join subject id, activity id and features of test subjects
 6. Row bind both previous data frames
 7. Merge it Activities descriptions
 8. Create summary data frame from previous joint, grouped by activity and subject and sumarizing variables calculating means for each variable, except activityid
