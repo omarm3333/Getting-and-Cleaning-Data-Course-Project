@@ -10,34 +10,14 @@ readXFile <- function (fileName, subjectsFile, activitiesFile, featureNames, ind
         ## 4. Appends subjects and activities
         ## 5. Return a Data Frame
         
-        # Read file
-        data <- readLines(con <- file(fileName)) ; close.connection(con)
+        # Read files
+        data       <- read.table(fileName,        header = FALSE, col.names = featureNames)
+        subjects   <- read.table (subjectsFile,   header = FALSE, col.names = "subject")
+        activities <- read.table (activitiesFile, header = FALSE, col.names = "activityid")
+
+        # Attach subjects and activities         
+        data <- cbind (activityid=activities, subject=subjects, data[,index])
         
-        # Collect records and convert to numeric, returns a matrix
-        data <- sapply (data,function (x) {
-                # Split by spaces each line read
-                ret <- unlist(strsplit(x," "))
-                
-                # Remove empty elements
-                ret <- ret[ret!=""]
-                
-                # Convert to numeric only Mean and Std features
-                ret <- as.numeric(ret [index])
-                
-                return (ret)
-        })
-        
-        # Assigns row and col names to the matrix that will be transpose
-        colnames(data) <- NULL
-        rownames(data) <- featureNames[index]
-        
-        # Read subjects and activities file
-        subjects   <- readLines(con<-file(subjectsFile))   ; close.connection(con)
-        activities <- readLines(con<-file(activitiesFile)) ; close.connection(con)
-        
-        # Transpose the matrix and append subjets info
-        data <- cbind (data.frame(t(data)), subject=as.integer(subjects), activityid=activities)
-        
-        # Return data frame
+        # Return data frame with only Mean and Std columns
         return (data)
 }

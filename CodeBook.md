@@ -36,4 +36,3 @@ Files structure:
 8. Create summary data frame from previous joint, grouped by activity and subject and sumarizing variables calculating means for each variable, except activityid
 9. Save both data frames to TXT files
  
- 

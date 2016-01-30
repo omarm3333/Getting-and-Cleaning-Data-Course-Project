@@ -7,17 +7,15 @@ source("run_analysis_func.R")
 data_path <- "UCI HAR Dataset"
 
 # Read activities descriptive name's file
-activities <- read.delim (file.path(data_path, "activity_labels.txt"), 
-                       sep = " ", header=FALSE, 
-                       col.names  = c("activityid","activity"),
-                       colClasses = c("factor","factor")
-                     )
+activities <- read.table (file.path(data_path, "activity_labels.txt"), 
+                          header=FALSE, 
+                          col.names  = c("activityid","activity")
+)
 
 # Read Features file
-features <- read.delim (file.path(data_path, "features.txt"), 
-                          sep = " ", header=FALSE, 
-                          col.names  = c("featurenum","originalColName"),
-                          colClasses = c("integer","character")
+features <- read.table (file.path(data_path, "features.txt"), 
+                        header=FALSE, 
+                        col.names  = c("featurenum","originalColName")
 )
 
 # Remove special characters from features colNames names: '(),'
@@ -28,7 +26,7 @@ features$colName <- features$originalColName %>%
         gsub("-", ".", .)
 
 # Create a numeric index of features with only Mean and Std measures
-indexMeanStdFeatures <- features$featurenum [grepl("mean|std", features$colName)]
+indexMeanStdFeatures <- features$featurenum [grepl("[Mm]ean|[Ss]td", features$colName)]
 
 # Read Train and Test records with only Mean and Std Features variables
 activityData <- rbind(
@@ -51,7 +49,7 @@ activityData <- merge (activityData, activities)
 
 # Build grouped means by Activity and Subject
 groupedActivityDataMeans <- activityData %>%
-        group_by (activity, subject) %>%
+        group_by (activity, subject)     %>%
         summarise_each (funs(mean), -activityid)
 
 # Append ".Mean" to summary column names
