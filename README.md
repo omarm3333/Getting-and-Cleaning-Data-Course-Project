@@ -25,11 +25,11 @@ Main R program does the functions calling and instructions to get and tidy data 
 ### run_analysis_func.R
 #### *readXFile (fileName, subjectsFile, activitiesFile, featureNames, index) Function*
 
-   fileName : Path and filename of the X file to read (*X_train.txt* or *X_test.txt*)
-   subjectsFile : Path and file name of subjects (*subject_train.txt* or *subject_test.txt*)
-   activitiesFile : Path and file name of subjects (*y_train.txt* or *y_test.txt*)
-   featureNames : Character vector with feature column names
-   index : Numeric index vector with the columns that are **Mean** or **Std** related
++ fileName       : Path and filename of the X file to read (*X_train.txt* or *X_test.txt*)
++ subjectsFile   : Path and file name of subjects (*subject_train.txt* or *subject_test.txt*)
++ activitiesFile : Path and file name of subjects (*y_train.txt* or *y_test.txt*)
++ featureNames   : Character vector with feature column names
++ index          : Numeric index vector with the columns that are **Mean** or **Std** related
    
 Description: Reads data *filename* (*X_train.txt* or *X_test.txt*), filters only features indicated by *index* logical vector. Name headers with *features* names and merge *subjectsFile* and *activitiesFile* information to resulting data frame.
 
