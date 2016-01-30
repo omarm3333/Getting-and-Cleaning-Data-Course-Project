@@ -4,6 +4,7 @@
 
 ### run_analysis.R
 Main R program does the functions calling and instructions to get and tidy data with the following actions:
+
 1. Sets working directory with *setwd()*
 2. Add library **dplyr**
 3. Defines the path to source data directory: **"UCI HAR Dataset"**
