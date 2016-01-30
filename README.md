@@ -23,11 +23,18 @@ Main R program does the functions calling and instructions to get and tidy data 
  * **groupedactivitydatameans.csv** for grouped and summirized records of *activityData*
 
 ### run_analysis_func.R
-#### *readXFile (fileName, subjectsFile, activitiesFile, features, index) Function*
+#### *readXFile (fileName, subjectsFile, activitiesFile, featureNames, index) Function*
+
+   fileName : Path and filename of the X file to read (*X_train.txt* or *X_test.txt*)
+   subjectsFile : Path and file name of subjects (*subject_train.txt* or *subject_test.txt*)
+   activitiesFile : Path and file name of subjects (*y_train.txt* or *y_test.txt*)
+   featureNames : Character vector with feature column names
+   index : Numeric index vector with the columns that are **Mean** or **Std** related
+   
 Description: Reads data *filename* (*X_train.txt* or *X_test.txt*), filters only features indicated by *index* logical vector. Name headers with *features* names and merge *subjectsFile* and *activitiesFile* information to resulting data frame.
 
 1. Read lines of data *filename*
 2. Iterate with *sapply()* in every line read to split line by spaces and remove empty variables, total of 561 variables per record. 
-3. Assing names to resulting matrix and transpose to a data fame
+3. Assing names of featureNames to resulting matrix and transpose to a data fame
 4. Read *subjectsFile* and *activitiesFile* files and column bind subjectsid and activityid for every record of data frame 
 5. Return resulting Data Frame with only columns of "**Mean**" or "**Std**" text in the name.

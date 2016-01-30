@@ -2,10 +2,10 @@
 ## ReadXFile ()
 ## ----------
 
-readXFile <- function (fileName, subjectsFile, activitiesFile, features, index) {
+readXFile <- function (fileName, subjectsFile, activitiesFile, featureNames, index) {
         ## Description:
         ## 1. Reads X files and formats 561 columns
-        ## 2. Assign column names indicated by features
+        ## 2. Assign column names indicated by featureNames
         ## 3. Filters for only columns indicated by index
         ## 4. Appends subjects and activities
         ## 5. Return a Data Frame
@@ -29,7 +29,7 @@ readXFile <- function (fileName, subjectsFile, activitiesFile, features, index) 
         
         # Assigns row and col names to the matrix that will be transpose
         colnames(data) <- NULL
-        rownames(data) <- features$colName[index]
+        rownames(data) <- featureNames[index]
         
         # Read subjects and activities file
         subjects   <- readLines(con<-file(subjectsFile))   ; close.connection(con)

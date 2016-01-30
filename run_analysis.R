@@ -36,13 +36,13 @@ activityData <- rbind(
                         file.path(data_path, "train", "X_train.txt"),
                         file.path(data_path, "train", "subject_train.txt"),
                         file.path(data_path, "train", "y_train.txt"),
-                        features, 
+                        features$colName, 
                         indexMeanStdFeatures),
                 readXFile (
                         file.path(data_path, "test", "X_test.txt"),
                         file.path(data_path, "test", "subject_test.txt"),
                         file.path(data_path, "test", "y_test.txt"),
-                        features, 
+                        features$colName, 
                         indexMeanStdFeatures)
         )
 
