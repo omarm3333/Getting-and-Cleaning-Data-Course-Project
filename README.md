@@ -3,7 +3,7 @@
 ## Scripts Descriptions
 
 ### run_analysis.R
-Main R program does the functions calling and instructions to get and tidy data whit following actions:
+Main R program does the functions calling and instructions to get and tidy data with the following actions:
 1. Sets working directory with *setwd()*
 2. Add library **dplyr**
 3. Defines the path to source data directory: **"UCI HAR Dataset"**
@@ -11,7 +11,7 @@ Main R program does the functions calling and instructions to get and tidy data 
 5. Reads **features** data frame with *read.delim()* defining headers and variable classes
 6. Append **colName** variable to features with **originalColNames** but removing special characters "*()-*" and replacing by "*.*"
 7. Create a index vector of features that contains only the words "**Mean**" and "**Std**" in the feature name (case insensitive)
-8, Call *readXFile()* to read **test** and **train** data files (*X_train.txt*) and merge *activityid* and *subjectid*. Returns ONLY the columns indicated by previous step vector (*indexMeanStdFeatures*)
+8. Call *readXFile()* to read **test** and **train** data files (*X_train.txt*) and merge *activityid* and *subjectid*. Returns ONLY the columns indicated by previous step vector (*indexMeanStdFeatures*)
 9. Row bind both data frames (test and train data)
 10. Merge to resulting *activityData* the activities detailed descriptions
 11. From *activityData* create new data frame summarizin all numeric values with means, except activityid; grouped by activity and subject. Resuts in *groupedActivityDataMeans* data frame
