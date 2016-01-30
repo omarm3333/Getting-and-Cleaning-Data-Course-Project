@@ -33,8 +33,8 @@ Main R program does the functions calling and instructions to get and tidy data 
    
 Description: Reads data *filename* (*X_train.txt* or *X_test.txt*), filters only features indicated by *index* logical vector. Name headers with *features* names and merge *subjectsFile* and *activitiesFile* information to resulting data frame.
 
-1. Read lines of data *filename*
-2. Iterate with *sapply()* in every line read to split line by spaces and remove empty variables, total of 561 variables per record. 
-3. Assing names of featureNames to resulting matrix and transpose to a data fame
-4. Read *subjectsFile* and *activitiesFile* files and column bind subjectsid and activityid for every record of data frame 
+1. Read lines of data *filename* into a table
+2. Read *subjectFile* table. 
+3. Read *activitiesFile* table. 
+4. Read Column bind activityid, subject all important columns indicated by *index* 
 5. Return resulting Data Frame with only columns of "**Mean**" or "**Std**" text in the name.
