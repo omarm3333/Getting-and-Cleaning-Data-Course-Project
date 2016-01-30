@@ -17,10 +17,10 @@ Main R program does the functions calling and instructions to get and tidy data 
 10. Merge to resulting *activityData* the activities detailed descriptions
 11. From *activityData* create a new data frame summarizing all numeric values with means, except activityid; grouped by activity and subject. Resuts in *groupedActivityDataMeans* data frame
 12. Append to *groupedActivityDataMeans* means column names the word "**.Mean**" in order to identify these as summirized columns of means.
-13. Save to CSV files both data frames "*activityData*" and "*groupedActivityDataMeans*"
+13. Save to TXT files both data frames "*activityData*" and "*groupedActivityDataMeans*"
 14. Result tidy data files are:
- * **activitydata.csv** for detailed X data files for both test and training data
- * **groupedactivitydatameans.csv** for grouped and summirized records of *activityData*
+ + **activitydata.txt** for detailed X data files for both test and training data
+ + **groupedactivitydatameans.txt** for grouped and summirized records of *activityData*
 
 ### run_analysis_func.R
 #### *readXFile (fileName, subjectsFile, activitiesFile, featureNames, index) Function*

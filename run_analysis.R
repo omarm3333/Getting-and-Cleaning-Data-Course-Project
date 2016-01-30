@@ -59,8 +59,8 @@ names(groupedActivityDataMeans)[3:length(groupedActivityDataMeans)] <- paste0(
                 names(groupedActivityDataMeans)[3:length(groupedActivityDataMeans)],".Mean"
         )
 
-# Output activityData to CSV file: activitydata.csv
-write.csv(activityData, "activitydata.csv")
+# Output activityData to TXT file: activitydata.txt
+write.table(activityData, "activitydata.txt", row.name=FALSE)
 
-# Output groupedActivityData to CSV file: groupedactivitydata.csv
-write.csv(groupedActivityDataMeans, "groupedactivitydatameans.csv")
+# Output groupedActivityData to TXT file: groupedactivitydata.txt
+write.table(groupedActivityDataMeans, "groupedactivitydatameans.txt", row.names = FALSE)

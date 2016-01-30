@@ -2,7 +2,7 @@
 
 # Analysis of Human Activity Recognition Using Smartphones Data Set
 
-Summary: The porpuse of this analysis is to get, clean, arrange and summarize data for Coursera Getting and Cleaning Data Course Project. The data were taken from Human Activity Recognition Using Smartphones Study (Detailed description of Study found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). Only information from Means and Standar Deviation variables (main features) from this study were considered for analysis. Data from all activities and all subjects were joint in CSV file called "activitydata.csv" and the means summary for Activity and Subject groups is saved to "groupedActivityDataMeans.csv".
+Summary: The porpuse of this analysis is to get, clean, arrange and summarize data for Coursera Getting and Cleaning Data Course Project. The data were taken from Human Activity Recognition Using Smartphones Study (Detailed description of Study found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). Only information from Means and Standar Deviation variables (main features) from this study were considered for analysis. Data from all activities and all subjects were joint in TXT file called "activitydata.csv" and the means summary for Activity and Subject groups is saved to "groupedActivityDataMeans.csv".
 
 ## Extent of Source Data
 Located in this url: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -34,6 +34,6 @@ Files structure:
 6. Row bind both previous data frames
 7. Merge it Activities descriptions
 8. Create summary data frame from previous joint, grouped by activity and subject and sumarizing variables calculating means for each variable, except activityid
-9. Save both data frames to CSV files
+9. Save both data frames to TXT files
  
  
