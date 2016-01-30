@@ -1,4 +1,4 @@
-Omar Marquina
+###**Omar Marquina**
 
 # Analysis of Human Activity Recognition Using Smartphones Data Set
 
